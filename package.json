@@ -1,0 +1,12 @@
+{
+  "name": "v-contextmenus",
+  "version": "0.2.0",
+  "description": "Vue 右键菜单功能",
+  "author": "kings <530675800@qq.com>",
+  "private": false,
+  "main": "./index.vue",
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  }
+}
