@@ -1,13 +1,15 @@
-# VContextmenus
+# VContextmenu
 
 右键菜单功能
+
+![demo](./Doc/demo.gif)
 
 ## 使用方式
 
 1. 安装
 
 ```shell
-yarn add v-contextmenus
+yarn add @ektx/v-contextmenu
 ```
 
 2. 在 vues 的 state 中添加共享状态与方法
@@ -15,7 +17,7 @@ yarn add v-contextmenus
 > 请先确保你有使用 vuex
 
 ```javascript
-import setContextmenu from 'v-contextmenus/store'
+import setContextmenu from '@eektx/v-contextmenus/store'
 
 const store = new Vuex.Store({
 	state: {},
@@ -41,7 +43,7 @@ const store = new Vuex.Store({
 
 <script>
 	// 引入
-	import VContextmenus from 'v-contextmenus'
+	import VContextmenus from '@ektx/v-contextmenus'
 
 	export default {
 		components: {
@@ -101,7 +103,7 @@ const store = new Vuex.Store({
 		}
 	}
 </script>
-``` 
+```
 
 ## 事件方法
 
