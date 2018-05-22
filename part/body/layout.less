@@ -1,0 +1,62 @@
+.contextmenu-body-mod {
+
+	ul {
+		position: fixed;
+		top: 100px;
+		left: 100px;
+		padding: 5px 0;
+		font-size: 1rem;
+		text-align: left;
+		line-height: 1.8rem;
+		white-space: nowrap;
+		background: rgba(255, 255, 255, .9);
+		border-radius: 3px;
+		box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+		z-index: 1000
+	}
+	
+	li {
+        min-width: 80px;
+		user-select: none;
+
+        &:hover {
+            background: #2196F3;
+
+            & > div {
+                color: #fff;
+            }
+        }
+
+		div {
+			padding: 0 15px 0 10px;
+            cursor: pointer;
+          
+			i {
+				float: right;
+				width: 0em;
+				margin-left: 5px;
+				pointer-events: none;
+
+				&:after {
+					display: inline-block;
+					content: '';
+					margin-left: 2px;
+					border: .4em solid transparent;
+					border-left-color: inherit;
+				}
+			}
+		}
+
+		.noEvt {
+			color: #aaa;
+			cursor: default;
+			pointer-events: none;
+		}
+
+		.separator {
+			margin: 2px 0;
+			border-bottom: 2px solid #eee;
+			pointer-events: none;
+		}
+	}
+}	
