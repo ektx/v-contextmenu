@@ -17,7 +17,7 @@ yarn add @ektx/v-contextmenu
 > 请先确保你有使用 vuex
 
 ```javascript
-import setContextmenu from '@eektx/v-contextmenus/store'
+import setContextmenu from '@ektx/v-contextmenus/store'
 
 const store = new Vuex.Store({
 	state: {},
