@@ -4,6 +4,8 @@
 
 ![demo](./Doc/demo.gif)
 
+> don't see img? [click here](https://github.com/ektx/v-contextmenu)
+
 ## 使用方式
 
 1. 安装

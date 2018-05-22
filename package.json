@@ -1,10 +1,14 @@
 {
   "name": "@ektx/v-contextmenu",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Vue 右键菜单功能",
   "author": "kings <530675800@qq.com>",
   "private": false,
   "main": "./index.vue",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ektx/v-contextmenu"
+  },
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
