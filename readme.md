@@ -2,9 +2,7 @@
 
 右键菜单功能
 
-![demo](./Doc/demo.gif)
-
-> don't see img? [click here](https://github.com/ektx/v-contextmenu)
+![demo](http://wx2.sinaimg.cn/mw690/9444af88gy1frnp17o49hg20fv08tgnn.gif)
 
 ## 使用方式
 
