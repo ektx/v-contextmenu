@@ -1,6 +1,6 @@
 <template>
 	<section v-show="showMenu" ref="contextMenu">
-		<VContextMenusBody ref="contextmenu" :menus="menus"></VContextMenusBody>
+		<VContextMenusBody ref="contextmenu" :menus="menus" />
 	</section>
 </template>
 

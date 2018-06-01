@@ -17,14 +17,10 @@ yarn add @ektx/v-contextmenu
 > 请先确保你有使用 vuex
 
 ```javascript
-import setContextmenu from '@ektx/v-contextmenus/store'
+import VContextmenu from '@ektx/v-contextmenu/store'
 
 const store = new Vuex.Store({
-	state: {},
-	// add this mutations
-	mutations: {
-		setContextmenu
-	}
+	modules: { VContextmenu }
 })
 ```
 
@@ -37,7 +33,7 @@ const store = new Vuex.Store({
 		<div @contextmenu.prevent="rightClick"></div>
 
 		<!-- 引用 HTML 结构 -->
-		<VContextmenus></VContextmenus>
+		<VContextmenus />
 	</main>
 </template>
 
@@ -96,7 +92,7 @@ const store = new Vuex.Store({
 		methods: {
 			// 自定义事件
 			rightClick (evt) {
-				store.commit('setContextmenu', {
+				this.$store.commit('setContextmenu', {
 					data: this.menu, evt
 				})
 			}

@@ -1,6 +1,3 @@
-
-let store = {}
-
 export default {
     name: 'v-contextmenus-body',
     props: ['menus'],
@@ -9,9 +6,6 @@ export default {
             openMenu: null,
             lazyShow: null
         }
-    },
-    beforeCreate () {
-        store = this.$store
     },
     methods: {
         /*

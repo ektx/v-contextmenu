@@ -9,10 +9,10 @@ export default {
     },
     computed: {
         menus () {
-            return this.$store.state.contextmenu.data
+            return this.$store.state.VContextmenu.data
         },
         showMenu() {
-            return this.$store.state.contextmenu.show
+            return this.$store.state.VContextmenu.show
         }
     },
     watch: {
@@ -20,8 +20,8 @@ export default {
             // 数据变化时自动关闭所有二级菜单
             this.$refs.contextmenu.hideOpenMenu('all')
             // 在 vuex 中如果有数据和鼠标事件的情况下我们格式化数据
-            if (this.$store.state.contextmenu.evt) 
-                this.show(val, this.$store.state.contextmenu.evt)
+            if (this.$store.state.VContextmenu.evt) 
+                this.show(val, this.$store.state.VContextmenu.evt)
         }
     },
     methods: {
@@ -121,11 +121,11 @@ export default {
     },
     beforeCreate () {
         // 设置默认值
-        this.$set(this.$store.state, 'contextmenu', {
-            show: true,
-            data: {},
-            evt: null
-        })
+        // this.$set(this.$store.state, 'contextmenu', {
+        //     show: true,
+        //     data: {},
+        //     evt: null
+        // })
     },
     created () {
         document.addEventListener('click', this.documentClick, false);

@@ -1,6 +1,6 @@
 {
   "name": "@ektx/v-contextmenu",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Vue 右键菜单功能",
   "author": "kings <530675800@qq.com>",
   "private": false,
