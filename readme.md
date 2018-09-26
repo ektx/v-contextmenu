@@ -52,10 +52,9 @@ const store = new Vuex.Store({
 					data: [
 						{
 							title: 'v-contenxtmenus',
-							evt: function(data) {
-
+							classes: 'hello',
+							evt (data) {
 								alert('Welcome Use v-contenxtmenus!')
-								
 							}
 						},
 						{
@@ -74,7 +73,7 @@ const store = new Vuex.Store({
 						},
 						{
 							title: 'Github.com',
-							evt: function() {
+							evt () {
 
 							}
 						},
