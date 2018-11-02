@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
 		<header>
-			<button></button>
+			<h1>@ektx/v-contextmenu</h1>
 		</header>
 		<main>
 			<aside @contextmenu.prevent="aside"></aside>
