@@ -5,7 +5,8 @@
   "author": "kings <530675800@qq.com>",
   "private": false,
   "scripts": {
-    "build": "rollup --config ./rollup.config.js"
+    "build": "rollup --config ./rollup.config.js",
+    "style": "gulp --gulpfile ./styles.js"
   },
   "main": "./dist/vcontextmenu.js",
   "repository": {
@@ -13,6 +14,10 @@
     "url": "https://github.com/ektx/v-contextmenu"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
     "rollup": "^0.66.6",
     "rollup-plugin-uglify": "^6.0.0",
     "rollup-plugin-vue": "^4.3.2",
