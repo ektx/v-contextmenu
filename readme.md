@@ -2,7 +2,7 @@
 
 右键菜单功能
 
-![demo](http://wx2.sinaimg.cn/mw690/9444af88gy1frnp17o49hg20fv08tgnn.gif)
+![demo](http://wx4.sinaimg.cn/large/9444af88gy1fwtpbclrn2g20lw0e740a.gif)
 
 ## 安装
 
