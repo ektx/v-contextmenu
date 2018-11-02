@@ -1,0 +1,80 @@
+
+.v-contextmenu-mod {
+    
+    .v-contextmenu-body {
+        position: fixed;
+        z-index: 10000;
+        margin: 0;
+        padding: 0;
+        border-radius: 3px;
+        box-shadow: 2px 3px 8px 0 rgba(0, 0, 0, .2);
+        background: rgba(255, 255, 255, .9);
+        
+        @supports (backdrop-filter: blur(5px)) {
+            background: rgba(255, 255, 255, .75);
+            backdrop-filter: blur(10px);
+        }     
+
+        ul {
+            margin: 0;
+            padding: 5px 0;
+            list-style: none;
+
+            li {
+                color: #333;
+                
+                .separator {
+                    display: block;
+                    margin: 3px 0;
+                    height: 2px;
+                    pointer-events: none;
+                    background: rgba(0, 0, 0, .1);
+                }
+
+                &.hold {
+                    color: #fff;
+                    background: #09f;
+
+                    a[disabled] {
+                        color: rgba(255, 255, 255, .5);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.v-contextmenu-link {
+    display: flex;
+    margin: 0 .5em 0 .8em;
+    font-size: 14px;
+    color: inherit;
+    white-space: nowrap;
+    line-height: 1.6em;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: pointer;
+
+    &[disabled] {
+        color: rgba(0, 0, 0, .4);
+        cursor: not-allowed;
+    }
+
+    span {
+        flex: 1;
+    }
+
+    i {
+        margin-left: 1em;
+        pointer-events: none;
+
+        &:after {
+            display: inline-block;
+            content: '';
+            margin-left: 2px;
+            border: .4em solid transparent;
+            border-left-color: inherit;
+        } 
+    }
+}

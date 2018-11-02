@@ -4,96 +4,74 @@
 
 ![demo](http://wx2.sinaimg.cn/mw690/9444af88gy1frnp17o49hg20fv08tgnn.gif)
 
-## 使用方式
+## 安装
 
-1. 安装
-
-```shell
+```bash
 yarn add @ektx/v-contextmenu
+npm i @ektx/v-contextmenu
 ```
 
-2. 在 vues 的 state 中添加共享状态与方法
+## NPM 使用
 
-> 请先确保你有使用 vuex
+### 引用组件
+```js
+import Vue from 'vue';
+import VContextmenu from 'vcontextmenu';
 
-```javascript
-import VContextmenu from '@ektx/v-contextmenu/store'
-
-const store = new Vuex.Store({
-	modules: { VContextmenu }
-})
+Vue.use(VContextmenu);
 ```
 
-3. 在页面中调用组件
-
+### Vue 页面使用
 ```html
 <template>
-	<main>
-		<!-- 绑定事件 -->
-		<div @contextmenu.prevent="rightClick"></div>
-
-		<!-- 引用 HTML 结构 -->
-		<VContextmenus />
-	</main>
+	<!-- 绑定事件 -->
+	<div @contextmenu.prevent="rightClick"></div>
 </template>
 
 <script>
-	// 引入
-	import VContextmenus from '@ektx/v-contextmenus'
-
 	export default {
-		components: {
-			VContextmenus
-		},
+		name: 'demo',
 		data () {
 			return {
 				// 菜单内容
-				menu: {
-					data: [
-						{
-							title: 'v-contenxtmenus',
-							classes: 'hello',
-							evt (data) {
-								alert('Welcome Use v-contenxtmenus!')
-							}
-						},
-						{
-							title: '联系方式',
-							children: [
-								{
-									title: 'ektx1989@gmail.com'
-								},
-								{
-									title: '@宅龙猫'
-								}
-							]
-						},
-						{
-							type: 'separator'
-						},
-						{
-							title: 'Github.com',
-							evt () {
+				menu: [{
+					title: 'v-contenxtmenus',
+					classes: 'hello',
+					evt (data) {
+						alert('Welcome Use v-contenxtmenus!')
+					}
+				},
+				{
+					title: '联系方式',
+					children: {
+						title: 'ektx1989@gmail.com'
+					},
+					{
+						title: '@宅龙猫'
+					}]
+				},
+				{
+					type: 'separator'
+				},
+				{
+					title: 'Github.com',
+					evt () {
 
-							}
-						},
-						{
-							type: 'separator'
-						},
-						{
-							disabled: true,
-							title: 'v 0.1.0'
-						}
-					]
-				}
+					}
+				},
+				{
+					type: 'separator'
+				},
+				{
+					disabled: true,
+					title: 'v 0.1.0'
+				}]
 			}
 		},
 		methods: {
 			// 自定义事件
 			rightClick (evt) {
-				this.$store.commit('setContextmenu', {
-					data: this.menu, evt
-				})
+				this.$VContextmenu.show(this.menu, evt)
 			}
 		}
 	}
@@ -101,16 +79,20 @@ const store = new Vuex.Store({
 ```
 
 ## 事件方法
+```js
+/**
+ * 显示功能
+ * @param [Array] 菜单内容
+ * @param [event] JS事件
+ */
+this.$VContextmenu.show(data, evt)
+```
 
-* 展示菜单功能
-
-> store.commit('setContextmenu', {data, evt})
-
-@data 菜单内容
-@evt 鼠标事件
-
-
-* 关闭菜单
-
-> store.commit('setContextmenu', { show: false })
-
+### data 说明
+| 标签 | 类型 | 说明 | 默认值 |
+| --- | --- | --- | --- |
+| title | `String` | 菜单列表标题 | - |
+| evt | `Function` | 菜单点击事件 | - |
+| disabled | `Boolean` | 是否可以使用 | - |
+| classes | `Class` | 自定义样式名 | - |
+| type | `separator` | 分隔线 | - |
