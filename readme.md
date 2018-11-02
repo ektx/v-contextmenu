@@ -17,6 +17,7 @@ npm i @ektx/v-contextmenu
 ```js
 import Vue from 'vue';
 import VContextmenu from 'vcontextmenu';
+import 'vcontextmenu/dist/vcontextmenu.css';
 
 Vue.use(VContextmenu);
 ```
