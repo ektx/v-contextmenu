@@ -118,6 +118,10 @@ var script = {
             if (!item.children) {
                 this.holdIndex = -1;
             }
+
+            if (item.disabled) {
+                this.$VContextmenu.config({disabled: false});
+            }
         },
 
         update () {

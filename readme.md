@@ -16,8 +16,8 @@ npm i @ektx/v-contextmenu
 ### 引用组件
 ```js
 import Vue from 'vue';
-import VContextmenu from 'vcontextmenu';
-import 'vcontextmenu/dist/vcontextmenu.css';
+import VContextmenu from '@ektx/v-contextmenu';
+import '@ektx/v-contextmenu/dist/vcontextmenu.css';
 
 Vue.use(VContextmenu);
 ```
