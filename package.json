@@ -1,12 +1,13 @@
 {
   "name": "@ektx/v-contextmenu",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Vue 右键菜单功能",
   "author": "kings <530675800@qq.com>",
   "private": false,
   "scripts": {
-    "build": "rollup --config ./rollup.config.js",
-    "style": "gulp --gulpfile ./styles.js"
+    "build": "rollup --config ./rollup.config.js && gulp --gulpfile ./styles.js",
+    "style": "gulp --gulpfile ./styles.js",
+    "js": "rollup --config ./rollup.config.js"
   },
   "main": "./dist/vcontextmenu.js",
   "repository": {

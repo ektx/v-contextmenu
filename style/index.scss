@@ -35,6 +35,11 @@
                     color: #fff;
                     background: #09f;
 
+                    a {
+                        color: #fff;
+                        transition: 0ms;
+                    }
+
                     a[disabled] {
                         color: rgba(255, 255, 255, .5);
                     }

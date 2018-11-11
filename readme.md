@@ -87,6 +87,11 @@ Vue.use(VContextmenu);
  * @param [event] JS事件
  */
 this.$VContextmenu.show(data, evt)
+
+/**
+ * 手动关闭功能
+ */
+this.$VContextmenu.close()
 ```
 
 ### data 说明
